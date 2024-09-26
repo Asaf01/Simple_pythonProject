@@ -1,0 +1,36 @@
+# pip3 install tweepy and urllib3==1.26.6
+
+import tweepy
+import random
+
+API_KEY='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+API_KEY_SECRET='xxxxxxxxxxxxxxxxxxxxxxx'
+
+BEARER_TOKEN='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
+ACCESS_TOKEN='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+ACCESS_TOKEN_SECRET='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
+
+# create an OAuthHandler instance
+client = tweepy.Client(
+    BEARER_TOKEN,
+    API_KEY,
+    API_KEY_SECRET,
+    ACCESS_TOKEN,
+    ACCESS_TOKEN_SECRET,
+)
+
+
+# create a tweet
+def tweet_random_number():
+    random_number = random.randint(1, 100)
+    client.create_tweet(text=str(random_number))
+
+# main function
+def main():
+    tweet_random_number()
+
+# call main function
+if __name__ == "__main__":
+    main()
