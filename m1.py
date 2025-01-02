@@ -56,8 +56,7 @@ def delete_all_movies():
     movies.clear()
     return movies
 
-#
-#
+
 # @app.delete('/movie/<int:id>')
 # def delete_movie(id):
 #     for movie in movies:
@@ -65,6 +64,5 @@ def delete_all_movies():
 #             movies.remove(movie)
 #     return 'Done'
 #
-
 
 app.run()
