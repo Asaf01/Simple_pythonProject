@@ -9,7 +9,7 @@ url = f"https://stooq.com/q/d/l/?s={ticker}&d1={start:%Y%m%d}&d2={end:%Y%m%d}&i=
 nvda = (pd.read_csv(url, parse_dates=["Date"])
            .set_index("Date")
            .sort_index())               # chronological order
-nvda
+print(nvda)
 
 
-#pip install panda 
+#pip install pandas
